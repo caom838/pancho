@@ -50,11 +50,29 @@
                     android:imeOptions="actionUnspecified" android:inputType="textPassword"
                     android:maxLines="1" android:singleLine="true" />
 
-                <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-                    android:layout_width="match_parent" android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp" android:text="@string/action_sign_in"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        style="?android:textAppearanceSmall"
+                        android:id="@+id/login_button"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/login"
+                        android:textStyle="bold"
+                        android:layout_gravity="left" />
 
+                    <Button android:id="@+id/email_sign_in_button"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/action_sign_in"
+                        android:textStyle="bold"
+                        android:layout_gravity="right" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

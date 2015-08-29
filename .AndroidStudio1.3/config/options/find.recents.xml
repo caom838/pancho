@@ -1,0 +1,9 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>email_sign_in_button</find>
+      <find>eplus_sign_in_button</find>
+      <find>attemptLogin</find>
+    </findStrings>
+  </component>
+</application>

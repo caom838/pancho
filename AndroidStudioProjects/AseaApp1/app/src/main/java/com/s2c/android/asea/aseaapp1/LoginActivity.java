@@ -42,17 +42,30 @@ import java.util.List;
  * and follow the steps in "Step 1" to create an OAuth 2.0 client for your package.
  */
 public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<Cursor> {
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, Bundle args) {
+        return null;
+    }
 
-    /**
+    @Override
+    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
+
+    }
+
+    @Override
+    public void onLoaderReset(Loader<Cursor> loader) {
+
+    }
+/* *//**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
-     */
+     *//*
     private static final String[] DUMMY_CREDENTIALS = new String[]{
             "foo@example.com:hello", "bar@example.com:world"
     };
-    /**
+    *//**
      * Keep track of the login task to ensure we can cancel it if requested.
-     */
+     *//*
     private UserLoginTask mAuthTask = null;
 
     // UI references.
@@ -121,11 +134,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     }
 
 
-    /**
+    *//**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
-     */
+     *//*
     public void attemptLogin() {
         if (mAuthTask != null) {
             return;
@@ -183,9 +196,9 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         return password.length() > 4;
     }
 
-    /**
+    *//**
      * Shows the progress UI and hides the login form.
-     */
+     *//*
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     public void showProgress(final boolean show) {
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
@@ -246,7 +259,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
     @Override
     protected void updateConnectButtonState() {
         //TODO: Update this logic to also handle the user logged in by email.
-        boolean connected = getPlusClient().isConnected();
+        //boolean connected = getPlusClient().isConnected();
 
         mSignOutButtons.setVisibility(connected ? View.VISIBLE : View.GONE);
         mPlusSignInButton.setVisibility(connected ? View.GONE : View.VISIBLE);
@@ -264,12 +277,12 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
     }
 
-    /**
+    *//**
      * Check if the device supports Google Play Services.  It's best
      * practice to check first rather than handling this as an error case.
      *
      * @return whether the device supports Google Play Services
-     */
+     *//*
     private boolean supportsGooglePlayServices() {
         return GooglePlayServicesUtil.isGooglePlayServicesAvailable(this) ==
                 ConnectionResult.SUCCESS;
@@ -329,10 +342,10 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
         mEmailView.setAdapter(adapter);
     }
 
-    /**
+    *//**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
-     */
+     *//*
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
         private final String mEmail;
@@ -384,6 +397,6 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
             mAuthTask = null;
             showProgress(false);
         }
-    }
+    }*/
 }
 
