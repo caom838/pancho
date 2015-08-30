@@ -2,7 +2,7 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Cuenta de correo</string>
-    <string name="prompt_password">Contraseña (opcional)</string>
+    <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Registrarse</string>
     <string name="action_sign_in_short">Ingresar</string>
     <string name="plus_sign_out">Cambiar Cuenta Google+ </string>
