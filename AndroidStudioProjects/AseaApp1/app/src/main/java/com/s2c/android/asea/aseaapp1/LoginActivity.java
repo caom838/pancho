@@ -23,6 +23,9 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.s2c.android.asea.core.AppConfig;
@@ -32,6 +35,7 @@ import com.s2c.android.asea.helper.SessionManager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -123,6 +127,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         info = (TextView)findViewById(R.id.info);
         loginButtonFacebook = (LoginButton)findViewById(R.id.login_button_facebook);
+        loginButtonFacebook.setReadPermissions(Arrays.asList("user_likes", "email","user_birthday","public_profile"));
 
         loginButtonFacebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
@@ -135,6 +140,29 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                 "Auth Token: "
                                 + loginResult.getAccessToken().getToken()
                 );
+
+                //sync info user facebook
+                GraphRequest request = GraphRequest.newMeRequest(
+                        loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
+                            @Override
+                            public void onCompleted(
+                                    JSONObject object,
+                                    GraphResponse response) {
+                                // Application code
+                                Log.v("LoginActivity", response.toString());
+                            }
+                        });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender, birthday");
+                request.setParameters(parameters);
+                request.executeAsync();
+
+                Profile profile = Profile.getCurrentProfile();
+                String firstName = profile.getFirstName();
+                System.out.println(profile.getProfilePictureUri(20,20));
+                System.out.println(profile.getLinkUri());
+
                 session.setLogin(true);
                 Intent intent = new Intent(LoginActivity.this,DashboardClient.class);
                 startActivity(intent);
@@ -143,12 +171,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
             @Override
             public void onCancel() {
-
+                info.setText(R.string.login_cancelado_facebook);
             }
 
             @Override
             public void onError(FacebookException e) {
-
+                info.setText(R.string.fallo_login_facebook);
             }
         });
 
@@ -235,6 +263,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private void hideDialog() {
         if (pDialog.isShowing())
             pDialog.dismiss();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

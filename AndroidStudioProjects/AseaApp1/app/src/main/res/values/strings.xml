@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AseaApp1</string>
+    <string name="app_name">Asea</string>
     <string name="title_activity_main">MainActivity</string>
 
     <string name="hello_world">Hello world!</string>
@@ -20,4 +20,6 @@
     <string name="title_activity_dashboard_client">DashboardClient</string>
 
     <string name="facebook_app_id">895783880509735</string>
+    <string name="login_cancelado_facebook">Se canceló el login con Facebook</string>
+    <string name="fallo_login_facebook">Falló el proceso de login con Facebook, intentelo de nuevo!</string>
 </resources>
