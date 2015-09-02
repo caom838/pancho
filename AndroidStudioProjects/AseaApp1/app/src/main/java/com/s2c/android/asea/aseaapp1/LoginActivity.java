@@ -12,12 +12,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.s2c.android.asea.core.AppConfig;
 import com.s2c.android.asea.core.AppController;
 import com.s2c.android.asea.helper.SessionManager;
@@ -47,7 +54,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText inputPassword;
     private ProgressDialog pDialog;
     private SessionManager session;
+    private TextView info;
+    private LoginButton loginButtonFacebook;
 
+    private CallbackManager callbackManager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -69,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, DashboardClient.class);
             startActivity(intent);
             finish();
         }
@@ -106,6 +116,42 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
+        // Initialize the SDK before executing any other operations,
+        // especially, if you're using Facebook UI elements.
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+
+        info = (TextView)findViewById(R.id.info);
+        loginButtonFacebook = (LoginButton)findViewById(R.id.login_button_facebook);
+
+        loginButtonFacebook.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+                info.setText(
+                        "User ID: "
+                                + loginResult.getAccessToken().getUserId()
+                                + "\n" +
+                                "Auth Token: "
+                                + loginResult.getAccessToken().getToken()
+                );
+                session.setLogin(true);
+                Intent intent = new Intent(LoginActivity.this,DashboardClient.class);
+                startActivity(intent);
+                finish();
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException e) {
+
+            }
+        });
+
     }
 
     /**
@@ -138,7 +184,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                         // Launch main activity
                         Intent intent = new Intent(LoginActivity.this,
-                                MainActivity.class);
+                                DashboardClient.class);
                         startActivity(intent);
                         finish();
                     } else {

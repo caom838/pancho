@@ -17,5 +17,7 @@
     <string name="welcome">Bienvenido</string>
     <string name="btn_logout">SALIR</string>
     <string name="name">Fullname</string>
+    <string name="title_activity_dashboard_client">DashboardClient</string>
 
+    <string name="facebook_app_id">895783880509735</string>
 </resources>
