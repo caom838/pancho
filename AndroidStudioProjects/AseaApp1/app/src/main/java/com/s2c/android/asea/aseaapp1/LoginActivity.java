@@ -66,6 +66,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Initialize the SDK before executing any other operations,
+        // especially, if you're using Facebook UI elements.
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+
         setContentView(R.layout.activity_login);
 
         inputEmail = (EditText) findViewById(R.id.email);
@@ -120,10 +126,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        // Initialize the SDK before executing any other operations,
-        // especially, if you're using Facebook UI elements.
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        callbackManager = CallbackManager.Factory.create();
+
 
         info = (TextView)findViewById(R.id.info);
         loginButtonFacebook = (LoginButton)findViewById(R.id.login_button_facebook);
@@ -160,8 +163,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                 Profile profile = Profile.getCurrentProfile();
                 String firstName = profile.getFirstName();
-                System.out.println(profile.getProfilePictureUri(20,20));
+                System.out.println(profile.getProfilePictureUri(20, 20));
                 System.out.println(profile.getLinkUri());
+
 
                 session.setLogin(true);
                 Intent intent = new Intent(LoginActivity.this,DashboardClient.class);
