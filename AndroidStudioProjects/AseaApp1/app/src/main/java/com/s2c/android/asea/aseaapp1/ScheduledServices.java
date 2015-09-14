@@ -1,11 +1,11 @@
 package com.s2c.android.asea.aseaapp1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.Activity;
 
-public class ScheduledServices extends AppCompatActivity {
+public class ScheduledServices extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

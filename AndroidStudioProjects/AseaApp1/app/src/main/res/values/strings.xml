@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="login">Ingresar</string>
-    <string name="title_activity_register">register</string>
+    <string name="title_activity_register">Registro</string>
 
     <string name="hint_email">Correo</string>
     <string name="hint_password">Contraseña</string>
@@ -16,15 +16,20 @@
     <string name="btn_link_to_login">Ya está registrado! Ingresar.</string>
     <string name="welcome">Bienvenido</string>
     <string name="btn_logout">SALIR</string>
-    <string name="name">Fullname</string>
-    <string name="title_activity_dashboard_client">DashboardClient</string>
+    <string name="name">Nombre Completo</string>
+    <string name="title_activity_dashboard_client">Bienvenido</string>
 
     <string name="facebook_app_id">895783880509735</string>
     <string name="login_cancelado_facebook">Se canceló el login con Facebook</string>
     <string name="fallo_login_facebook">Falló el proceso de login con Facebook, intentelo de nuevo!</string>
-    <string name="title_activity_new_service">NewService</string>
-    <string name="title_activity_scheduled_services">ScheduledServices</string>
-    <string name="title_activity_payments">Payments</string>
-    <string name="title_activity_rate_service">RateService</string>
-    <string name="title_activity_schedule">Schedule</string>
+    <string name="title_activity_new_service">Servicio Nuevo</string>
+    <string name="title_activity_scheduled_services">Servicios Programados</string>
+    <string name="title_activity_payments">Método de Pago</string>
+    <string name="title_activity_rate_service">Calificar Servicio</string>
+    <string name="title_activity_schedule">Programación</string>
+    <string name="my_account">Mi Cuenta</string>
+    <string name="scheduled_services">Servicios Programados</string>
+    <string name="new_service">Programar Nuevo Servicio</string>
+
+
 </resources>

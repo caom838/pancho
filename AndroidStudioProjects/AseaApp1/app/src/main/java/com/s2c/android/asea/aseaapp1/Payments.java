@@ -1,11 +1,12 @@
 package com.s2c.android.asea.aseaapp1;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class Payments extends AppCompatActivity {
+public class Payments extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

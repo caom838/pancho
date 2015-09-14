@@ -1,5 +1,6 @@
 package com.s2c.android.asea.aseaapp1;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -14,7 +15,7 @@ import com.google.android.gms.common.Scopes;
 /**
  * A base class to wrap communication with the Google Play Services PlusClient.
  */
-public abstract class PlusBaseActivity extends AppCompatActivity
+public abstract class PlusBaseActivity extends Activity
         //implements GooglePlayServicesClient.ConnectionCallbacks,
         //GooglePlayServicesClient.OnConnectionFailedListener
         {

@@ -21,22 +21,22 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.gms.common.SignInButton android:id="@+id/plus_sign_in_button"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/plus_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp" />
 
             <com.facebook.login.widget.LoginButton
                 android:id="@+id/login_button_facebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:layout_marginBottom="5dp"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/info"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:textSize="18sp"
                 />
@@ -85,9 +85,7 @@
                     android:singleLine="true"
                     android:textColor="@color/input_login"
                     android:textColorHint="@color/input_login_hint"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
+
                     />
 
 

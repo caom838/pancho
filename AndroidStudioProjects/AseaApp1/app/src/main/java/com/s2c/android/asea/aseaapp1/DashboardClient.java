@@ -1,11 +1,11 @@
 package com.s2c.android.asea.aseaapp1;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class DashboardClient extends AppCompatActivity {
+public class DashboardClient extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
