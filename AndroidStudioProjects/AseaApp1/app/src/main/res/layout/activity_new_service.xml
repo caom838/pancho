@@ -44,7 +44,34 @@ style="@android:style/Theme.Holo.Light">
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dip"
-        android:layout_below="@id/header">
+        android:layout_below="@id/header"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblDireccion"
+            android:text="@string/direccion_servicio" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDireccion"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:id="@+id/lvPlanes"
+            android:layout_weight="2.33" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/program_service"
+            android:id="@+id/btnSchedule"
+            android:layout_gravity="center_horizontal" />
+
 
     </LinearLayout>
     <!-- Content Ends-->

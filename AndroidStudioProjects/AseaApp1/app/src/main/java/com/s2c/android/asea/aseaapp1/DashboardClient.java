@@ -1,16 +1,54 @@
 package com.s2c.android.asea.aseaapp1;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class DashboardClient extends Activity {
+
+    private Button btnMyAccount;
+    private Button btnNewService;
+    private Button btnScheduled;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_client);
+
+
+        btnMyAccount = (Button) findViewById(R.id.btnMyAccount);
+        btnNewService = (Button) findViewById(R.id.btnNewServ);
+        btnScheduled =(Button) findViewById(R.id.btnSchedServ);
+
+        //set listeners
+        btnMyAccount.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent ma = new Intent(getApplicationContext(),MyAccount.class);
+                                                startActivity(ma);
+                                            }
+                                        }
+        );
+
+        btnNewService.setOnClickListener(new View.OnClickListener(){
+                                             @Override
+                                             public void onClick(View v) {
+                                                 startActivity(new Intent(getApplicationContext(),NewService.class));
+                                             }
+                                         }
+        );
+
+        btnScheduled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),ScheduledServices.class));
+            }
+        });
+
     }
 
     @Override

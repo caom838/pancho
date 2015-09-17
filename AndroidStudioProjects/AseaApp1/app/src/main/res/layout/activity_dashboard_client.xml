@@ -47,7 +47,7 @@
             android:rowCount="3"
             android:id="@+id/gridLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="40dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -55,18 +55,21 @@
                 android:layout_column="0"
                 android:layout_row="0"
                 android:orientation="vertical"
-                android:paddingTop="20dp">
+                android:paddingTop="20dp"
+                android:layout_gravity="fill_horizontal"
+                android:layout_columnWeight="1">
 
                 <Button
                     android:id="@+id/btnMyAccount"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/my_account"
                     android:drawableTop="@mipmap/icon_logo_grey"
                     android:background="@null"
                     android:layout_column="0"
                     android:layout_row="0"
-                    android:text="@string/my_account"/>
+                    android:text="@string/my_account"
+                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
 
             <LinearLayout
@@ -76,11 +79,12 @@
                 android:layout_row="0"
                 android:orientation="vertical"
                 android:paddingTop="20dp"
->
+                android:layout_gravity="fill_horizontal"
+                android:layout_columnWeight="1">
 
                 <Button
                     android:id="@+id/btnSchedServ"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableTop="@mipmap/schedule_icon"
                     android:background="@null"
@@ -102,14 +106,15 @@
 
                 <Button
                     android:id="@+id/btnNewServ"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="0"
                     android:layout_columnSpan="2"
                     android:layout_row="1"
                     android:drawableLeft="@mipmap/btn_new_service"
+                    android:drawablePadding="15dp"
                     android:background="@null"
-                    android:text="@string/new_service"/>
+                    android:text="@string/new_service" />
 
 
             </LinearLayout>

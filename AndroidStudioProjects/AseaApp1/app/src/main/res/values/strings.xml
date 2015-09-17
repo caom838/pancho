@@ -28,8 +28,11 @@
     <string name="title_activity_rate_service">Calificar Servicio</string>
     <string name="title_activity_schedule">Programación</string>
     <string name="my_account">Mi Cuenta</string>
-    <string name="scheduled_services">Servicios Programados</string>
+    <string name="scheduled_services">Servicios \nProgramados</string>
     <string name="new_service">Programar Nuevo Servicio</string>
+    <string name="title_activity_my_account">MyAccount</string>
+    <string name="direccion_servicio">Dirección del Servicio</string>
+    <string name="program_service">Programar Servicio</string>
 
 
 </resources>

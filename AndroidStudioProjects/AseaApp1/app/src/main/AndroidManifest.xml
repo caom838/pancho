@@ -35,7 +35,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,7 +44,7 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:label="@string/title_activity_register">
+            android:label="@string/title_activity_register" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity" />
@@ -66,9 +66,8 @@
 
         <activity
             android:name=".NewService"
-            android:label="@string/title_activity_new_service"
             android:icon="@drawable/cabezote1"
-            >
+            android:label="@string/title_activity_new_service" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DashboardClient" />
@@ -100,6 +99,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DashboardClient" />
+        </activity>
+        <activity
+            android:name=".MyAccount"
+            android:label="@string/title_activity_my_account" >
         </activity>
     </application>
 
