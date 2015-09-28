@@ -3,4 +3,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="size_text_tile">20dp</dimen>
+
+    <dimen name="name_plan">17dp</dimen>
+    <dimen name="description_plan">15dip</dimen>
+    <dimen name="price_plan">12dip</dimen>
 </resources>

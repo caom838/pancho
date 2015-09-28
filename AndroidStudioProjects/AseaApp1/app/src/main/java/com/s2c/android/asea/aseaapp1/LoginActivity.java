@@ -195,8 +195,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         pDialog.setMessage("Logging in ...");
         showDialog();
 
-        StringRequest strReq = new StringRequest(Request.Method.POST,
-                AppConfig.URL_REGISTER, new Response.Listener<String>() {
+        StringRequest strReq = new StringRequest(Request.Method.POST,AppConfig.URL_REGISTER, new Response.Listener<String>() {
 
             @Override
             public void onResponse(String response) {
@@ -214,8 +213,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         session.setLogin(true);
 
                         // Launch main activity
-                        Intent intent = new Intent(LoginActivity.this,
-                                DashboardClient.class);
+                        Intent intent = new Intent(LoginActivity.this,DashboardClient.class);
                         startActivity(intent);
                         finish();
                     } else {

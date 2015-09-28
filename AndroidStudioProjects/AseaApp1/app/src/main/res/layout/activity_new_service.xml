@@ -20,11 +20,7 @@ style="@android:style/Theme.Holo.Light">
         android:background="@drawable/cabezote1"
         android:orientation="horizontal"
         >
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            />
         <!-- Logo Start-->
         <TextView
             android:layout_width="wrap_content"
@@ -43,7 +39,8 @@ style="@android:style/Theme.Holo.Light">
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dip"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
         android:layout_below="@id/header"
         android:weightSum="1">
 
@@ -51,7 +48,8 @@ style="@android:style/Theme.Holo.Light">
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lblDireccion"
-            android:text="@string/direccion_servicio" />
+            android:text="@string/direccion_servicio"
+            android:labelFor="@+id/txtDireccion"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -59,11 +57,22 @@ style="@android:style/Theme.Holo.Light">
             android:id="@+id/txtDireccion"
             android:layout_gravity="center_horizontal" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPlanes"
+            android:text="@string/title_plan"
+            android:layout_marginTop="30dp"
+            android:labelFor="@+id/lvPlanes"/>
         <ListView
             android:layout_width="match_parent"
             android:layout_height="310dp"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
             android:id="@+id/lvPlanes"
-            android:layout_weight="2.33" />
+            android:layout_weight="2.33"
+            android:listSelector="@drawable/list_row_selector_plan"
+            android:choiceMode="singleChoice" />
 
         <Button
             android:layout_width="wrap_content"
