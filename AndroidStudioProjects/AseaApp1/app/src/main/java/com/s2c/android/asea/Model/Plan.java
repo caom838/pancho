@@ -1,9 +1,11 @@
 package com.s2c.android.asea.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by caom on 20/09/2015.
  */
-public class Plan {
+public class Plan implements Serializable {
 
     private Long id;
     private String name;

@@ -30,10 +30,10 @@
     <string name="my_account">Mi Cuenta</string>
     <string name="scheduled_services">Servicios \nProgramados</string>
     <string name="new_service">Programar Nuevo Servicio</string>
-    <string name="title_activity_my_account">MyAccount</string>
+    <string name="title_activity_my_account">Mi cuenta</string>
     <string name="direccion_servicio">Dirección del Servicio</string>
     <string name="program_service">Programar Servicio</string>
-    <string name="title_plan">Plan a adquirir</string>
+    <string name="title_plan">Plan a Adquirir</string>
 
 
 </resources>

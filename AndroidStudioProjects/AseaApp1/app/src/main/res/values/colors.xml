@@ -13,7 +13,7 @@
     <color name="btn_login_bg">#eceef1</color>
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
-    <color name="bg_splash">#CEEFF3</color>
+    <color name="bg_splash">#f9f9ff</color>
     <color name="bg_btn_green">#BBFF00</color>
     <color name="bg_cabezote">#FFC20F</color>
     <color name="price">#888888</color>

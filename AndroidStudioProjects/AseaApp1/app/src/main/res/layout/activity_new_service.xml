@@ -4,7 +4,8 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
 android:fillViewport="true"
-style="@android:style/Theme.Holo.Light">
+style="@android:style/Theme.Holo.Light"
+    tools:context=".NewService">
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -28,7 +29,7 @@ style="@android:style/Theme.Holo.Light">
             android:id="@+id/headerText"
             android:textStyle="bold"
             android:paddingStart="80dp"
-            android:text="@string/title_activity_new_service" />
+            android:text="@string/new_service" />
         <!-- Logo Ends -->
     </LinearLayout>
     <!--  Header Ends -->
@@ -66,13 +67,14 @@ style="@android:style/Theme.Holo.Light">
             android:labelFor="@+id/lvPlanes"/>
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="310dp"
+            android:layout_height="206dp"
             android:divider="@color/list_divider"
             android:dividerHeight="1dp"
             android:id="@+id/lvPlanes"
-            android:layout_weight="2.33"
             android:listSelector="@drawable/list_row_selector_plan"
-            android:choiceMode="singleChoice" />
+            android:choiceMode="singleChoice"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.27" />
 
         <Button
             android:layout_width="wrap_content"
