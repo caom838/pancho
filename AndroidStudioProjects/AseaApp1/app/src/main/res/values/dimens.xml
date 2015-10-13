@@ -7,4 +7,14 @@
     <dimen name="name_plan">17dp</dimen>
     <dimen name="description_plan">15dip</dimen>
     <dimen name="price_plan">12dip</dimen>
+
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+
+    <dimen name="size_fab">56dp</dimen>
+    <dimen name="size_avatar_toolbar">40dp</dimen>
+    <dimen name="size_avatar_width">120dp</dimen>
+    <dimen name="size_avatar_height">120dp</dimen>
+    <dimen name="size_edit_text">18sp</dimen>
+
 </resources>

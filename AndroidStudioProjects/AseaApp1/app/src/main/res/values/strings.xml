@@ -35,5 +35,12 @@
     <string name="program_service">Programar Servicio</string>
     <string name="title_plan">Plan a Adquirir</string>
 
+    <string name="first_name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="phoneUser">Celular</string>
+    <string name="phoneWorkUser">Teléfono de Trabajo</string>
+    <string name="phoneLocalUser">Teléfono Hogar</string>
+    <string name="txtSaveProfile">Guardar</string>
+
 
 </resources>

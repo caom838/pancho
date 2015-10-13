@@ -2,4 +2,6 @@
 <resources>
     <string name="direccion_servicio">Dirección del Servicio</string>
     <string name="program_service">Programar Servicio</string>
+    <string name="fistName">Nombre</string>
+    <string name="txtSaveProfile">Guardar</string>
 </resources>

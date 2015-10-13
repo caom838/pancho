@@ -1,12 +1,83 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.s2c.android.asea.aseaapp1.MyAccount">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imgPhoto"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:minHeight="@dimen/size_avatar_height"
+    android:minWidth="@dimen/size_avatar_width"
+    />
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:minHeight="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/spacing_micro"
+        android:paddingTop="@dimen/spacing_micro"
+        android:textSize="@dimen/size_edit_text" />
+
+    <EditText
+        android:id="@+id/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions|textCapWords"
+        android:minHeight="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/spacing_micro"
+        android:paddingTop="@dimen/spacing_micro"
+        android:textSize="@dimen/size_edit_text" />
+
+    <EditText
+        android:id="@+id/emailUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
+        android:imeOptions="actionNext"
+        android:inputType="textCapWords"
+        android:minHeight="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/spacing_micro"
+        android:paddingTop="@dimen/spacing_micro"
+        android:textSize="@dimen/size_edit_text" />
+
+    <EditText
+        android:id="@+id/phoneUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phoneUser"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions|textCapWords"
+        android:minHeight="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/spacing_micro"
+        android:paddingTop="@dimen/spacing_micro"
+        android:textSize="@dimen/size_edit_text" />
+
+    <EditText
+        android:id="@+id/phoneWorkUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phoneWorkUser"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions|textCapWords"
+        android:minHeight="?android:attr/actionBarSize"
+        android:paddingBottom="@dimen/spacing_micro"
+        android:paddingTop="@dimen/spacing_micro"
+        android:textSize="@dimen/size_edit_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtSaveProfile"
+        android:id="@+id/btnSaveProfile" />
+
+
+</LinearLayout>
