@@ -130,4 +130,16 @@ public class SQLiteHandler extends SQLiteOpenHelper{
 
         Log.d(TAG, "Deleted all user info from sqlite");
     }
+
+    public int getUser() {
+        String countQuery = "SELECT top(1) * FROM " + TABLE_LOGIN;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        int rowCount = cursor.getCount();
+        db.close();
+        cursor.close();
+
+        // return row count
+        return rowCount;
+    }
 }

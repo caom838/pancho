@@ -1,7 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:orientation="vertical">
+android:orientation="vertical"
+    android:background="@color/my_account_dark"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -23,7 +26,8 @@ android:orientation="vertical">
         android:minHeight="?android:attr/actionBarSize"
         android:paddingBottom="@dimen/spacing_micro"
         android:paddingTop="@dimen/spacing_micro"
-        android:textSize="@dimen/size_edit_text" />
+        android:textSize="@dimen/size_edit_text"
+        android:background="@color/white" />
 
     <EditText
         android:id="@+id/last_name"
@@ -35,7 +39,9 @@ android:orientation="vertical">
         android:minHeight="?android:attr/actionBarSize"
         android:paddingBottom="@dimen/spacing_micro"
         android:paddingTop="@dimen/spacing_micro"
-        android:textSize="@dimen/size_edit_text" />
+        android:textSize="@dimen/size_edit_text"
+        android:background="@color/white"
+        android:layout_marginTop="5dp" />
 
     <EditText
         android:id="@+id/emailUser"
@@ -47,7 +53,9 @@ android:orientation="vertical">
         android:minHeight="?android:attr/actionBarSize"
         android:paddingBottom="@dimen/spacing_micro"
         android:paddingTop="@dimen/spacing_micro"
-        android:textSize="@dimen/size_edit_text" />
+        android:textSize="@dimen/size_edit_text"
+        android:background="@color/white"
+        android:layout_marginTop="5dp" />
 
     <EditText
         android:id="@+id/phoneUser"
@@ -59,7 +67,9 @@ android:orientation="vertical">
         android:minHeight="?android:attr/actionBarSize"
         android:paddingBottom="@dimen/spacing_micro"
         android:paddingTop="@dimen/spacing_micro"
-        android:textSize="@dimen/size_edit_text" />
+        android:textSize="@dimen/size_edit_text"
+        android:background="@color/white"
+        android:layout_marginTop="5dp" />
 
     <EditText
         android:id="@+id/phoneWorkUser"
@@ -71,13 +81,20 @@ android:orientation="vertical">
         android:minHeight="?android:attr/actionBarSize"
         android:paddingBottom="@dimen/spacing_micro"
         android:paddingTop="@dimen/spacing_micro"
-        android:textSize="@dimen/size_edit_text" />
+        android:textSize="@dimen/size_edit_text"
+        android:background="@color/white"
+        android:layout_marginTop="5dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtSaveProfile"
-        android:id="@+id/btnSaveProfile" />
+        android:id="@+id/btnSaveProfile"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_marginLeft="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
 
 
 </LinearLayout>
